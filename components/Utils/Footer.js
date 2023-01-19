@@ -1,12 +1,16 @@
-import Link from 'next/link'
-import React from 'react'
+import React from "react";
+import Link from "next/link";
+import { useRecoilState } from "recoil";
+import { loadingState } from "../../state/loading";
 
-const Floater = () => {
+const Footer = () => {
+  const [loading, setLoading] = useRecoilState(loadingState);
+
   return (
-    <div className="absolute top-60 right-8 w-6 h-32 hidden md:block">
-      <ul className='flex-col justify-between items-center'>
-        <li className='cursor-pointer my-4'>
-          <Link href={`https://twitter.com/KellsLTE`}>
+    <div className={`my-8 mx-auto w-52 ${loading && "hidden"}`}>
+      <ul className="flex items-center justify-between mx-auto">
+        <li className="my-4 cursor-pointer">
+          <Link href={`https://twitter.com/KellsLTE`} target="_blank">
             <svg
               width="40"
               height="40"
@@ -34,8 +38,8 @@ const Floater = () => {
             </svg>
           </Link>
         </li>
-        <li className='cursor-pointer my-4'>
-          <Link href={`https://linkedin.com/in/max-otifavour`}>
+        <li className="my-4 cursor-pointer">
+          <Link href={`https://linkedin.com/in/max-otifavour`} target="_blank">
             <svg
               width="40"
               height="40"
@@ -63,8 +67,8 @@ const Floater = () => {
             </svg>
           </Link>
         </li>
-        <li className='cursor-pointer my-4'>
-          <Link href={`https://github.com/KellsLTE`}>
+        <li className="my-4 cursor-pointer">
+          <Link href={`https://github.com/KellsLTE`} target="_blank">
             <svg
               width="40"
               height="40"
@@ -84,9 +88,16 @@ const Floater = () => {
           </Link>
         </li>
       </ul>
-      <div className='w-[1px] h-64 bg-projectColor ml-5 my-6'></div> 
+      <div className="flex mx-auto my-4 text-center">
+        <span className="mx-auto text-projectColor">
+          Designed by
+          <a href="" className="px-2 text-center text-white">
+            Prince Chijioke
+          </a>
+        </span>
+      </div>
     </div>
   );
-}
+};
 
-export default Floater
+export default Footer;

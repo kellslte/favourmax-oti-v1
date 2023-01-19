@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
 const DownArrow = () => {
   return (
-    <div className="bg-base flex absolute -bottom-64">
+    <div className="bg-base flex absolute -bottom-52">
       <span className="text-[#97A1AB] animate-bounce">
         <svg
           class="w-6 h-6"
@@ -21,6 +21,6 @@ const DownArrow = () => {
       </span>
     </div>
   );
-}
+};
 
-export default DownArrow
+export default DownArrow;

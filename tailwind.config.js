@@ -14,9 +14,9 @@ module.exports = {
         line: "#343B41",
         link: "#E3E5E8",
         project: "#1E1E37",
-        block: '#51516A',
-        rec: '#97A1AB',
-        projectColor: '#ADB5BD',
+        block: "#51516A",
+        rec: "#97A1AB",
+        projectColor: "#ADB5BD",
       },
       fontFamily: {
         monument: ["Monument Extended"],
@@ -34,7 +34,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwind-scrollbar-hide'),
+    require("tailwind-scrollbar-hide"),
     plugin(function ({ addUtilities, addComponents, e, config }) {
       addUtilities({
         ".text-shadow-sm": {
@@ -57,17 +57,26 @@ module.exports = {
 
       addComponents({
         ".project-sm": {
-          width: '302px',
-          height: '330px',
-          border: '1px solid #97A1AB',
-          padding: '1rem 1.5rem'
+          width: "302px",
+          height: "330px",
+          border: "1px solid #97A1AB",
+          padding: "1rem 1.5rem",
         },
         ".project-md": {
-          width: '462px',
-          height: '362px',
-          boxSizing: 'border-box',
-          border: '1px solid #97A1AB',
-          padding: '2rem 2.5rem',
+          width: "462px",
+          height: "362px",
+          boxSizing: "border-box",
+          border: "1px solid #97A1AB",
+          padding: "2rem 2.5rem",
+        },
+        ".feature-sm": {
+          width: "85vh",
+          height: "700px",
+        },
+        ".feature-md": {
+          width: "562px",
+          height: "462px",
+          boxSizing: "border-box",
         },
       });
     }),

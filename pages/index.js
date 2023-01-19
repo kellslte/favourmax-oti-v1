@@ -1,18 +1,20 @@
-import Head from 'next/head'
-import headTitle from '../state/head'
+import Head from "next/head";
+import headTitle from "../state/head";
 import { useRecoilState } from "recoil";
-import Button from '../components/Utils/Button'
+import Button from "../components/Utils/Button";
 import { loadingState } from "../state/loading";
-import Link from 'next/link';
-import DownArrow from '../components/Utils/DownArrow'
-import Projects from "../components/Project";
-import About from '../components/About'
-import Work from '../components/Work'
-import Floater from '../components/Utils/Floater'
+import Link from "next/link";
+import DownArrow from "../components/Utils/DownArrow";
+import Projects from "../components/Projects";
+import About from "../components/About";
+import Work from "../components/Work";
+import Floater from "../components/Utils/Floater";
+import Separator from "../components/Utils/Separator";
+import Contact from "../components/Contact";
 
 const Home = () => {
-  const [head, setHead] = useRecoilState(headTitle)
-  const [loading, setLoading] = useRecoilState(loadingState)
+  const [head, setHead] = useRecoilState(headTitle);
+  const [loading, setLoading] = useRecoilState(loadingState);
 
   return (
     <div className={`w-full ${loading && "hidden"} h-full block`}>
@@ -21,10 +23,10 @@ const Home = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <header className="relative mb-[18rem] px-8 w-[90%] md:w-[88%] mx-auto">
-        <h1 className="text-link font-monument text-4xl leading-[2rem] md:leading-[4rem] mt-64 font-extrabold">
+        <h1 className="text-link font-monument text-4xl leading-[2rem] md:leading-[4rem] mt-40 font-extrabold">
           Hey, I'm Max
         </h1>
-        <p className="text-link py-4 leading-8 mb-6 font-lato md:w-1/2">
+        <p className="py-4 mb-4 leading-8 text-link font-lato md:w-1/2">
           I'm a backend software developer. I learned to write code in 2019 with
           HTML, CSS and JavaScript. Since then I have spent my time learning the
           trade and honing my craft. I have written good code (in my opinion
@@ -48,8 +50,10 @@ const Home = () => {
       <Projects />
       <About />
       <Work />
+      <Separator text={`I write PHP, Node Js, Golang and Ruby`} />
+      <Contact />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;
