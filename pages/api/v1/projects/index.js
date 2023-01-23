@@ -8,6 +8,7 @@ export default function handler(req, res) {
       projects: [
         {
           id: randomUUID(),
+          modalKey: 1,
           title: "Super Drive",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",
@@ -15,6 +16,7 @@ export default function handler(req, res) {
         },
         {
           id: randomUUID(),
+          modalKey: 2,
           title: "Super Drive",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",
@@ -22,6 +24,7 @@ export default function handler(req, res) {
         },
         {
           id: randomUUID(),
+          modalKey: 3,
           title: "Super Drive",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",
@@ -29,6 +32,7 @@ export default function handler(req, res) {
         },
         {
           id: randomUUID(),
+          modalKey: 4,
           title: "Super Drive",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",
@@ -36,34 +40,7 @@ export default function handler(req, res) {
         },
         {
           id: randomUUID(),
-          title: "Super Drive",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",
-          link: "http://lorembasetext",
-        },
-        {
-          id: randomUUID(),
-          title: "Super Drive",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",
-          link: "http://lorembasetext",
-        },
-        {
-          id: randomUUID(),
-          title: "Super Drive",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",
-          link: "http://lorembasetext",
-        },
-        {
-          id: randomUUID(),
-          title: "Super Drive",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",
-          link: "http://lorembasetext",
-        },
-        {
-          id: randomUUID(),
+          modalKey: 5,
           title: "Super Drive",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laboriosam repellat dolore in veritatis autem ad qui error animi expedita velit ut.",

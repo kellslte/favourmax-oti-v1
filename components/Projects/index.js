@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Project from "./Project";
 import Title from "../Utils/Title";
-import Popup from "../Utils/Popup";
+import Popup1 from "../Utils/Popup";
 import { atom, useRecoilState } from "recoil";
 
 const projectId = atom({
@@ -19,16 +19,9 @@ const projects = atom({
   default: [],
 });
 
-const modalOpen = atom({
-  key: "modalOpen",
-  default: false,
-});
-
 const Projects = () => {
   const [projectsData, setProjectsData] = useRecoilState(projects);
   const [isLoading, setIsLoading] = useRecoilState(loading);
-  const [showModal, setShowModal] = useRecoilState(modalOpen);
-  const [projectKey, setProjectKey] = useRecoilState(projectId);
 
   const loadData = async () => {
     setIsLoading(true);
@@ -52,19 +45,13 @@ const Projects = () => {
           projectsData.map((project) => (
             <Project
               key={project.id}
-              id={project.id}
               title={project.title}
               description={project.description}
               link={project.link}
-              showModal={showModal}
-              setShowModal={setShowModal}
-              setProjectKey={setProjectKey}
+              modalKey={project.modalKey}
             />
           ))}
       </div>
-      {showModal && (
-        <Popup id={projectId} isOpen={showModal} setIsOpen={setShowModal} />
-      )}
     </div>
   );
 };
