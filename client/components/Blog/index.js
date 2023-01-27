@@ -10,7 +10,11 @@ const Blog = ({ data, text }) => {
   const [loading, setLoading] = useRecoilState(loadingState);
 
   return (
-    <div className={`bg-base w-full h-fit py-8 my-4 ${loading && "hidden"}`}>
+    <div
+      className={`bg-base w-full h-fit py-8 my-4 ${
+        loading && "hidden"
+      } md:px-20`}
+    >
       <Title text={text} />
       <div
         className={`flex px-6 py-6 my-4 overflow-x-auto gap-x-5 scrollbar-hide h-fit`}

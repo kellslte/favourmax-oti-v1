@@ -38,7 +38,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="bg-project w-full h-fill pt-[32px] px-6 md:h-[591px]">
+    <div
+      className="bg-project w-full h-fill pt-[32px] px-6 md:h-[591px] md:px-20"
+      id="projects"
+    >
       <Title text={`Selected Projects`} />
       <div className="flex px-6 py-6 overflow-auto gap-x-4 scrollbar-hide">
         {!isLoading &&

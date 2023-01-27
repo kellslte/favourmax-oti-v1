@@ -6,7 +6,7 @@ const Feature = ({ image, title, content, link }) => {
   let blurDataURL = `data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`;
 
   return (
-    <div className="flex-none w-full border-2 border-projectColor h-fit">
+    <div className="flex-none w-full border-2 border-projectColor h-fit md:w-[30rem]">
       <div className="w-full border-b border-projectColor">
         <Image
           src={image}

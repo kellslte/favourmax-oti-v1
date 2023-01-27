@@ -1,16 +1,12 @@
-import React from "react";
 import Link from "next/link";
-import { useRecoilState } from "recoil";
-import { loadingState } from "../../state/loading";
+import React from "react";
 
-const Footer = () => {
-  const [loading, setLoading] = useRecoilState(loadingState);
-
+const Floater = () => {
   return (
-    <div className={`my-8 mx-auto w-52 ${loading && "hidden"}`}>
-      <ul className="flex items-center justify-between mx-auto">
-        <li className="my-4 cursor-pointer">
-          <Link href={`https://twitter.com/KellsLTE`} target="_blank">
+    <div className="absolute top-60 right-8 w-6 h-32 hidden md:block">
+      <ul className="flex-col justify-between items-center">
+        <li className="cursor-pointer my-4">
+          <Link href={`https://twitter.com/KellsLTE`}>
             <svg
               width="40"
               height="40"
@@ -38,8 +34,8 @@ const Footer = () => {
             </svg>
           </Link>
         </li>
-        <li className="my-4 cursor-pointer">
-          <Link href={`https://linkedin.com/in/max-otifavour`} target="_blank">
+        <li className="cursor-pointer my-4">
+          <Link href={`https://linkedin.com/in/max-otifavour`}>
             <svg
               width="40"
               height="40"
@@ -67,8 +63,8 @@ const Footer = () => {
             </svg>
           </Link>
         </li>
-        <li className="my-4 cursor-pointer">
-          <Link href={`https://github.com/KellsLTE`} target="_blank">
+        <li className="cursor-pointer my-4">
+          <Link href={`https://github.com/KellsLTE`}>
             <svg
               width="40"
               height="40"
@@ -88,16 +84,9 @@ const Footer = () => {
           </Link>
         </li>
       </ul>
-      <div className="flex mx-auto my-4 text-center">
-        <span className="mx-auto text-projectColor">
-          Designed by
-          <a href="" className="px-2 text-center text-white">
-            Prince Chijioke
-          </a>
-        </span>
-      </div>
+      <div className="w-[1px] h-[13.7rem] bg-projectColor ml-5 my-6"></div>
     </div>
   );
 };
 
-export default Footer;
+export default Floater;

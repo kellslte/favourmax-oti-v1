@@ -1,7 +1,6 @@
-import React from 'react'
+import React from "react";
 
 const Job = ({ title, duration, description, site }) => {
-  
   let jobDescription = description.split(",");
 
   return (
@@ -69,13 +68,13 @@ const Job = ({ title, duration, description, site }) => {
           <span>{duration}</span>
         </h1>
       </div>
-      <ul className='list-disc pl-16'>
+      <ul className="list-disc pl-16 md:w-2/3">
         {jobDescription.map((item) => (
           <li className="font-lato text-projectColor my-4 text-md">{item}</li>
         ))}
       </ul>
     </div>
   );
-}
+};
 
-export default Job
+export default Job;

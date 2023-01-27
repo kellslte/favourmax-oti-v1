@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import React from 'react'
-import Title from '../Utils/Title';
-import Socials from './Socials'
+import Image from "next/image";
+import React from "react";
+import Title from "../Utils/Title";
+import Socials from "./Socials";
 
 const About = () => {
   return (
-    <div className="w-full px-6 py-8 my-4 bg-base h-fit">
+    <div className="w-full px-6 py-8 my-4 bg-base h-fit md:px-20">
       <Title text={`About Me`} />
       <div className="flex">
         <div className="rounded-lg ml-[40px]">
@@ -29,6 +29,6 @@ const About = () => {
       </div>
     </div>
   );
-}
+};
 
-export default About
+export default About;

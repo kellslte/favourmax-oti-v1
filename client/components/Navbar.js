@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import React, { useState } from 'react'
-import Image from 'next/image'
-import { useRecoilState } from 'recoil'
-import { loadingState } from '../state/loading'
+import Link from "next/link";
+import React, { useState } from "react";
+import Image from "next/image";
+import { useRecoilState } from "recoil";
+import { loadingState } from "../state/loading";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [loading, setLoading] = useRecoilState(loadingState)
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useRecoilState(loadingState);
   return (
     <>
       <nav
@@ -58,7 +58,7 @@ const Navbar = () => {
 
           {/* Mobile Menu open: "block", Menu closed: "hidden" */}
           <div
-            className={`absolute h-92 inset-x-0 z-20 w-full top-0 px-6 py-4 transition-all duration-300 ease-in-out bg-base md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${
+            className={`absolute h-[35rem] md:min-h-fit md:h-fit inset-x-0 z-20 w-full top-0 px-6 py-4 transition-all duration-300 ease-in-out bg-base md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center ${
               !isOpen && "hidden"
             }`}
           >
@@ -88,33 +88,38 @@ const Navbar = () => {
               </button>
               <Link
                 className="hover:text-icon leading-4 font-semibold text-sm"
-                href="#projects"
+                href="/#projects"
+                scroll={false}
               >
                 Projects
               </Link>
               <Link
                 className="hover:text-icon leading-4 font-semibold"
-                href="#about"
+                href="/#about"
+                scroll={false}
               >
                 About Me
               </Link>
               <Link
                 className="hover:text-icon leading-4 font-semibold"
-                href="#work"
+                href="/#work"
+                scroll={false}
               >
                 Work Experience
               </Link>
               <Link
                 className="hover:text-icon leading-4 font-semibold"
-                href="#contact"
+                href="/#contact"
+                scroll={false}
               >
                 Contact Me
               </Link>
               <Link
                 className="hover:text-icon leading-4 font-semibold"
                 href="/blog"
+                passHref
               >
-                My Blog
+                <a>My Blog</a>
               </Link>
             </div>
           </div>
@@ -122,6 +127,6 @@ const Navbar = () => {
       </nav>
     </>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

@@ -1,9 +1,12 @@
-import React from 'react'
-import Button from '../Utils/Button';
+import React from "react";
+import Button from "../Utils/Button";
 
 const Contact = () => {
   return (
-    <div className="bg-project w-full h-fit py-[40px] px-6 my-4 relative">
+    <div
+      className="bg-project w-full h-fit py-[40px] px-6 my-4 relative md:px-20"
+      id="contact"
+    >
       <h1 className="text-link font-monument text-2xl leading-[2rem] my-10 font-extrabold">
         Got an idea you would like us to talk about?
       </h1>
@@ -19,6 +22,6 @@ const Contact = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Contact
+export default Contact;
