@@ -16,13 +16,12 @@ const About = () => {
             You can call me Max
           </h1>
           <p className="my-6 text-projectColor font-lato">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quam
-            dolorem fuga nulla natus obcaecati ex, in labore fugiat, veniam
-            sunt, odio temporibus veritatis laudantium! Laboriosam nobis sint
-            fugit repellat! Natus provident ratione corrupti sapiente quidem
-            inventore praesentium quisquam odio aliquam. Modi, unde praesentium
-            dicta reiciendis inventore error maxime dolorem. Laboriosam, tempore
-            praesentium odit odio sed quis dolore nihil eligendi?
+            I am a development driven software developer. I love learning new
+            technologies that could make my work better. This drive takes me on
+            a learning journey to always learn how best my work can be done. So
+            you will find me trying out new technologies, reading or giving a
+            speech. Much of my time is spent writing code, breaking it and
+            fixing it up!
           </p>
           <Socials />
         </div>

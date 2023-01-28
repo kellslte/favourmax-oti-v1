@@ -57,14 +57,14 @@ module.exports = {
 
       addComponents({
         ".project-sm": {
-          width: "302px",
-          height: "330px",
+          width: "20rem",
+          height: "25rem",
           border: "1px solid #97A1AB",
           padding: "1rem 1.5rem",
         },
         ".project-md": {
-          width: "462px",
-          height: "362px",
+          width: "30rem",
+          height: "23rem",
           boxSizing: "border-box",
           border: "1px solid #97A1AB",
           padding: "2rem 2.5rem",

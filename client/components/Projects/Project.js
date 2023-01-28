@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-import { atom, useRecoilState } from "recoil";
+import React, { useEffect, useState } from "react";
 import Popup from "../Utils/Popup";
 
-const modal = atom({
-  key: "modal",
-  default: false,
-});
-
-const Project = ({ title, description, modalKey, setModal, id }) => {
+const Project = ({ title, description, id, brief, link, languages }) => {
   const [showModal, setShowModal] = useState(false);
+  const fields = {
+    id,
+    title,
+    description,
+    brief,
+    link,
+    languages,
+  };
 
   return (
     <>
@@ -68,7 +70,11 @@ const Project = ({ title, description, modalKey, setModal, id }) => {
         </button>
       </div>
       {showModal && (
-        <Popup id={id} showModal={showModal} setShowModal={setShowModal} />
+        <Popup
+          data={fields}
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
       )}
     </>
   );

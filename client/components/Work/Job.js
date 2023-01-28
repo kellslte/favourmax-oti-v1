@@ -1,12 +1,36 @@
 import React from "react";
 
-const Job = ({ title, duration, description, site }) => {
+const Job = ({ title, description, start, end }) => {
   let jobDescription = description.split(",");
+
+  let duration;
+
+  const formatDate = (start, end) => {
+    if (!end)
+      duration =
+        new Date(start).toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "long",
+        }) + " - present";
+    else
+      duration =
+        new Date(start).toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "long",
+        }) +
+        " - " +
+        new Date(end).toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "long",
+        });
+  };
+
+  formatDate(start, end);
 
   return (
     <div className="my-4">
       <div className="w-fit h-fit">
-        <h1 className="text-monument text-white text-xl font-extrabold flex">
+        <h1 className="flex text-xl font-extrabold text-white text-monument">
           <span className="mr-3">
             <svg
               width="20"
@@ -68,9 +92,9 @@ const Job = ({ title, duration, description, site }) => {
           <span>{duration}</span>
         </h1>
       </div>
-      <ul className="list-disc pl-16 md:w-2/3">
+      <ul className="pl-16 list-disc md:w-2/3">
         {jobDescription.map((item) => (
-          <li className="font-lato text-projectColor my-4 text-md">{item}</li>
+          <li className="my-4 font-lato text-projectColor text-md">{item}</li>
         ))}
       </ul>
     </div>

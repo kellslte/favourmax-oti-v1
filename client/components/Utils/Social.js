@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 
 const Social = ({ url, title }) => {
-  console.log(url);
   return (
     <div className="flex items-center justify-between w-44">
       <span className="text-xs text-white">Share this post:</span>
