@@ -30,7 +30,7 @@ const Rounder = () => {
     <div className="md:flex flex-col items-center justify-center hidden">
       <div className="w-16 h-full flex flex-col items-center justify-center">
         <svg
-          className="w-40 h-40"
+          className="w-40 h-40 hover:animate-spin"
           viewBox="0 0 116 116"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

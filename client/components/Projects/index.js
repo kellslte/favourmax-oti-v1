@@ -18,24 +18,7 @@ const projects = atom({
   default: [],
 });
 
-const Projects = () => {
-  const [projectsData, setProjectsData] = useRecoilState(projects);
-  const [isLoading, setIsLoading] = useRecoilState(loading);
-
-  const loadData = async () => {
-    setIsLoading(true);
-    const res = await fetch("http://localhost:1337/api/projects");
-
-    const { data } = await res.json();
-
-    setProjectsData(data);
-    setIsLoading(false);
-  };
-
-  useEffect(() => {
-    loadData();
-  }, []);
-
+const Projects = ({ projects }) => {
   return (
     <div
       className="bg-project w-full h-fill py-[40px] px-6 md:h-[591px] md:px-20"
@@ -43,18 +26,17 @@ const Projects = () => {
     >
       <Title text={`Selected Projects`} />
       <div className="flex px-6 py-6 overflow-auto gap-x-4 scrollbar-hide">
-        {!isLoading &&
-          projectsData.map((project) => (
-            <Project
-              key={project.id}
-              title={project.attributes.title}
-              description={project.attributes.description}
-              id={project.id}
-              brief={project.attributes.brief}
-              link={project.attributes.link}
-              languages={project.attributes.languages}
-            />
-          ))}
+        {projects.data.map((project) => (
+          <Project
+            key={project.id}
+            title={project.attributes.title}
+            description={project.attributes.description}
+            id={project.id}
+            brief={project.attributes.brief}
+            link={project.attributes.link}
+            languages={project.attributes.languages}
+          />
+        ))}
       </div>
     </div>
   );

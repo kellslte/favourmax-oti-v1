@@ -12,14 +12,18 @@ import Floater from "../components/Utils/Floater";
 import Separator from "../components/Utils/Separator";
 import Contact from "../components/Contact";
 
-const Home = () => {
+const baseUrl = process.env.NEXT_STRAPI_API_URI;
+
+const Home = ({ works, projects }) => {
   const [head, setHead] = useRecoilState(headTitle);
   const [loading, setLoading] = useRecoilState(loadingState);
 
   return (
     <div className={`w-full ${loading && "hidden"} h-full block`}>
       <Head>
-        <title>KellsLTE - Backend Software Developer | Welcome</title>
+        <title>
+          KellsLTE - Backend Software Developer | Welcome to my portfolio
+        </title>
         <link rel="icon" href="/favicon.png" />
       </Head>
       <header className="relative mb-[18rem] px-8 w-[90%] md:w-[88%] mx-auto">
@@ -47,13 +51,28 @@ const Home = () => {
         <DownArrow />
         <Floater />
       </header>
-      <Projects />
+      <Projects projects={projects} />
       <About />
-      <Work />
-      <Separator text={`I write PHP, Node Js, Golang and Ruby`} />
+      <Work works={works} />
+      <Separator
+        text={`I write PHP, Node Js and occassionally dabble in the frontend with Next Js and Vue Js`}
+      />
       <Contact />
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const works = await fetch(`${baseUrl}/works`);
+
+  const projects = await fetch(`${baseUrl}/projects`);
+
+  return {
+    props: {
+      works: await works.json(),
+      projects: await projects.json(),
+    },
+  };
+}
 
 export default Home;

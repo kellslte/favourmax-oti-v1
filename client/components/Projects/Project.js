@@ -14,7 +14,7 @@ const Project = ({ title, description, id, brief, link, languages }) => {
 
   return (
     <>
-      <div className="flex-none project-sm md:project-md">
+      <div className="flex-none project-sm md:project-md hover:animate-pulse">
         <svg
           width="32"
           height="32"

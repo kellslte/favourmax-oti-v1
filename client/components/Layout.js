@@ -25,9 +25,9 @@ const Layout = ({ children }) => {
       <Loader loading={loading} setLoading={setLoading} />
       <Navbar loading={loading} />
       <main>{children}</main>
-      <Conditional showWhen={isLoading === false}>
+      {/* <Conditional showWhen={isLoading === false}>
         <Blog data={data} text={text} />
-      </Conditional>
+      </Conditional> */}
       <Footer loading={loading} />
       <div id="modal-root"></div>
     </div>
