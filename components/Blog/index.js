@@ -8,9 +8,7 @@ const Blog = ({ data, text }) => {
 
   return (
     <div
-      className={`bg-base w-full h-fit py-8 my-4 ${
-        loading && "hidden"
-      } md:px-20`}
+      className={`bg-base w-full h-fit py-8 my-4 md:px-20`}
     >
       <Title text={text} />
       <div
