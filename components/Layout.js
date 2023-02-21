@@ -6,7 +6,34 @@ import Footer from "../components/Utils/Footer";
 import Conditional from "./Utils/Conditional";
 import useFetchData from "../hooks/useFetchData";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion";
+
+const variants = {
+  out: {
+    opacity: 0,
+    y: -100,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    }
+  },
+  in: {
+    y: 100,
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    }
+  },
+  inactive: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut'
+    },
+  }
+};
 
 const Layout = ({ children }) => {
   const [loading, setLoading] = useState(true);
@@ -18,24 +45,29 @@ const Layout = ({ children }) => {
 
   path.startsWith("/blog") ? (text = "My other articles") : (text = "My Blog");
 
-  return loading
-    ?
-    <Loader loading={ loading } setLoading={ setLoading } />
-    :
-    <motion.div
-      initial={ { x: 300, opacity: 0 } }
-      animate={ { x: 0, opacity: 1 } }
-      exit={ { x: 300, opacity: 0 } }
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      className="h-screen overflow-x-hidden bg-base">
-      <Navbar />
-      <main>{children}</main>
-      {/* <Conditional showWhen={isLoading === false}>
-        <Blog data={data} text={text} />
-      </Conditional> */}
-      <Footer />
-      <div id="modal-root"></div>
-    </motion.div>
+  return loading ? (
+    <Loader loading={loading} setLoading={setLoading} />
+  ) : (
+    <AnimatePresence mode="wait">
+        <motion.div
+          variants={variants}
+        initial={`in`}
+        animate={`inactive`}
+          exit={ `out` }
+          key={path}
+        transition={{ type: "spring", stiffness: 260, damping: 20 }}
+        className="h-screen overflow-x-hidden bg-base"
+      >
+        <Navbar />
+        <main>{children}</main>
+        {/* <Conditional showWhen={isLoading === false}>
+          <Blog data={data} text={text} />
+        </Conditional> */}
+        <Footer />
+        <div id="modal-root"></div>
+      </motion.div>
+    </AnimatePresence>
+  );
 };
 
 export default Layout;

@@ -58,7 +58,7 @@ module.exports = {
 
       addComponents({
         ".project-sm": {
-          width: "20rem",
+          width: "25rem",
           height: "25rem",
           border: "1px solid #97A1AB",
           padding: "1rem 1.5rem",

@@ -39,7 +39,7 @@ const Home = ({ works, projects }) => {
         </p>
         <Button
           title={"view resume"}
-          link={process.env.NEXT_RESUME_URL}
+          link={'https://drive.google.com/file/d/1EgC0AfN518kG-bqD0zqfi5X5vKfIJ9Bs/view?usp=sharing'}
         />
         <DownArrow />
         <Floater />
@@ -55,7 +55,7 @@ const Home = ({ works, projects }) => {
   );
 };
 
-export async function getStaticProps ()
+export async function getServerSideProps ()
 {
   const { data } = await client.query( {
     query: gql`query {

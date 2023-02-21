@@ -12,7 +12,7 @@ const Contact = () => {
       </h1>
       <Button
         title={`view resume`}
-        link={process.env.NEXT_RESUME_URL}
+        link={'https://drive.google.com/file/d/1EgC0AfN518kG-bqD0zqfi5X5vKfIJ9Bs/view?usp=sharing'}
         icon={`/message-tick.svg`}
       />
       <div className="absolute inline-flex items-stretch bottom-0 right-5">
