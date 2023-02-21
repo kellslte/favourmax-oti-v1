@@ -1,22 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Project from "./Project";
 import Title from "../Utils/Title";
-import { atom, useRecoilState } from "recoil";
-
-const projectId = atom({
-  key: "projectId",
-  default: null,
-});
-
-const loading = atom({
-  key: "loading",
-  default: false,
-});
-
-const projects = atom({
-  key: "projects",
-  default: [],
-});
 
 const Projects = ({ projects }) => {
   return (

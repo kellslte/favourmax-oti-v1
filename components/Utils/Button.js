@@ -3,8 +3,9 @@ import React from "react";
 const Button = ({ title, link, icon }) => {
   return (
     <a
-      className="border-icon border-2 py-8 px-8 text-center md:px-4 md:py-4 font-lato inline-flex font-semibold"
+      className="border-icon border-2 py-8 px-8 text-center md:px-4 md:py-4 font-lato inline-flex font-semibold cursor-pointer"
       href={link}
+      target='_blank'
     >
       <span className="uppercase text-icon">{title}</span>
       <span className="pl-8 text-icon font-semibold">

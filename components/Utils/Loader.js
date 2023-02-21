@@ -2,16 +2,20 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 import indicator from "../../assets/loader.png";
 import Image from "next/image";
 import useInterval from "../../hooks/useInterval";
+import Head from "next/head";
 
 const Loader = ({ loading, setLoading }) => {
   const [level, setLevel] = useState(0);
   const [width, setWidth] = useState(0);
   const [w, setW] = useState(0);
   const loaderContainer = useRef(null);
-
-  useLayoutEffect(() => {
-    setWidth(loaderContainer.current.offsetWidth);
-  });
+  
+  ( typeof window !== 'undefined' )
+    ? useLayoutEffect( () =>
+    {
+      setWidth( loaderContainer.current.offsetWidth );
+    } )
+    : () => { };
 
   useInterval(
     () => {
@@ -29,8 +33,14 @@ const Loader = ({ loading, setLoading }) => {
     <div
       className={`flex flex-col justify-center items-center absolute top-0 w-screen h-screen bg-base ${
         !loading && "hidden"
-      }`}
+        }` }
     >
+      <Head>
+        <title>
+          KellsLTE - Backend Software Developer | Portfolio loading...
+        </title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       {/* Loader Text Will show up here */}
       <span className="mx-auto mb-4 text-xs font-extrabold text-center text-white uppercase font-monument">
         deploying {level}%

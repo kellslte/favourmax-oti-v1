@@ -2,12 +2,9 @@ import React from "react";
 import Title from "../Utils/Title";
 import Data from "../data";
 import Feature from "./Feature";
-import { useRecoilState } from "recoil";
-import { loadingState } from "../../state/loading";
 
 const Blog = ({ data, text }) => {
   const { blog } = Data;
-  const [loading, setLoading] = useRecoilState(loadingState);
 
   return (
     <div

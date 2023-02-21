@@ -1,16 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { useRecoilState } from "recoil";
-import { loadingState } from "../../state/loading";
 
 const Footer = () => {
-  const [loading, setLoading] = useRecoilState(loadingState);
-
   return (
-    <div className={`my-8 mx-auto w-52 ${loading && "hidden"}`}>
+    <div className={`my-8 mx-auto w-52`}>
       <ul className="flex items-center justify-between mx-auto md:hidden">
         <li className="my-4 cursor-pointer">
-          <Link href={`https://twitter.com/KellsLTE`} target="_blank">
+          <Link href={`https://twitter.com/kellslte`} target="_blank">
             <svg
               width="40"
               height="40"
@@ -68,7 +64,7 @@ const Footer = () => {
           </Link>
         </li>
         <li className="my-4 cursor-pointer">
-          <Link href={`https://github.com/KellsLTE`} target="_blank">
+          <Link href={`https://github.com/kellslte`} target="_blank">
             <svg
               width="40"
               height="40"

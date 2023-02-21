@@ -1,17 +1,12 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import { useRecoilState } from "recoil";
-import { loadingState } from "../state/loading";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useRecoilState(loadingState);
   return (
     <nav
-      className={`relative bg-base text-icon shadow w-[90%] md:w-[85%] border-b border-b-line mx-auto ${
-        loading && "hidden"
-      } md:w-[95%]`}
+      className={`relative bg-base text-icon shadow w-[90%] border-b border-b-line mx-auto md:w-[85%]`}
     >
       <div className="container px-6 py-4 mx-auto">
         <div className="lg:flex lg:items-center lg:justify-between">

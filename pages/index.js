@@ -1,8 +1,5 @@
 import Head from "next/head";
-import headTitle from "../state/head";
-import { useRecoilState } from "recoil";
 import Button from "../components/Utils/Button";
-import { loadingState } from "../state/loading";
 import Link from "next/link";
 import DownArrow from "../components/Utils/DownArrow";
 import Projects from "../components/Projects";
@@ -15,11 +12,9 @@ import { gql } from "@apollo/client";
 import { client } from "../helpers";
 
 const Home = ({ works, projects }) => {
-  const [head, setHead] = useRecoilState(headTitle);
-  const [ loading, setLoading ] = useRecoilState( loadingState );
 
   return (
-    <div className={`w-full ${loading && "hidden"} h-full block`}>
+    <div className={`w-full h-full block`}>
       <Head>
         <title>
           KellsLTE - Backend Software Developer | Welcome to my portfolio

@@ -6,7 +6,7 @@ const Floater = () => {
     <div className="absolute top-60 right-8 w-6 h-32 hidden md:block">
       <ul className="flex-col justify-between items-center">
         <li className="cursor-pointer my-4">
-          <Link href={`https://twitter.com/KellsLTE`}>
+          <Link href={`https://twitter.com/kellslte`} target='_blank' className="cursor-pointer">
             <svg
               width="40"
               height="40"
@@ -35,7 +35,7 @@ const Floater = () => {
           </Link>
         </li>
         <li className="cursor-pointer my-4">
-          <Link href={`https://linkedin.com/in/max-otifavour`}>
+          <Link href={`https://linkedin.com/in/max-otifavour`} target='_blank' className="cursor-pointer">
             <svg
               width="40"
               height="40"
@@ -64,7 +64,7 @@ const Floater = () => {
           </Link>
         </li>
         <li className="cursor-pointer my-4">
-          <Link href={`https://github.com/KellsLTE`}>
+          <Link href={`https://github.com/kellslte`} target='_blank' className="cursor-pointer">
             <svg
               width="40"
               height="40"
