@@ -1,7 +1,5 @@
 import React from "react";
 import useFetchData from "../../hooks/useFetchData";
-import { useRecoilState } from "recoil";
-import { loadingState } from "../../state/loading";
 
 const Blog = () => {
   return (

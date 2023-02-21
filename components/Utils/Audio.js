@@ -1,23 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useRef, useEffect } from "react";
-import { useRecoilState } from "recoil";
-import { atom } from "recoil";
-
-const playTimeDuration = atom({
-  key: "playTimeDuration",
-  default: 0.0,
-});
-
-const playingStatus = atom({
-  key: "playingStatus",
-  default: false,
-});
 
 const Audio = ({ src }) => {
   const player = useRef(null);
-  const [isPlaying, setIsPlaying] = useRecoilState(playingStatus);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const [playTime, setPlayTime] = useRecoilState(playTimeDuration);
+  const [playTime, setPlayTime] = useState(0.0);
 
   const play = (e) => {
     isPlaying === true ? player.current.pause() : player.current.play();
