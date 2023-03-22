@@ -29,12 +29,15 @@ const About = () => {
             You can call me Max
           </h1>
           <p className="my-6 text-projectColor font-lato md:w-2/3 w-full">
-            I am a development driven software developer. I love learning new
-            technologies that could make my work better. This drive takes me on
-            a learning journey to always learn how best my work can be done. So
-            you will find me trying out new technologies, reading or giving a
-            speech. Much of my time is spent writing code, breaking it and
-            fixing it up!
+            I'm a backend developer with a knack for problem solving and
+            creative thinking. I've been working in the IT field for over four
+            years now, and I am always eager to learn new skills. I thrive on
+            challenges, whether it's figuring out how to make a new system work
+            or coming up with a new way to solve an old problem. I believe that
+            it's important to be open-minded and creative when working with
+            technology. In my experience, this allows me to think outside the
+            box and come up with creative solutions that others might not have
+            thought of.
           </p>
           <Socials />
         </div>

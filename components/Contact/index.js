@@ -11,8 +11,8 @@ const Contact = () => {
         Got an idea you would like us to talk about?
       </h1>
       <Button
-        title={`view resume`}
-        link={'https://drive.google.com/file/d/1EgC0AfN518kG-bqD0zqfi5X5vKfIJ9Bs/view?usp=sharing'}
+        title={`Send me an email`}
+        link={'mailto:maxotif@gmail.com?subject=Hello'}
         icon={`/message-tick.svg`}
       />
       <div className="absolute inline-flex items-stretch bottom-0 right-5">

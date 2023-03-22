@@ -44,15 +44,21 @@ const Home = ({ works, projects }) => {
       <div className={`w-full h-full block`}>
         <header className="relative mb-[18rem] lg:mb-[23rem] px-8 w-[90%] md:w-[88%] mx-auto lg:h-fit">
           <h1 className="text-link font-monument text-4xl leading-[2rem] md:leading-[4rem] mt-40 font-extrabold">
-            Hey, I'm Max
+            Hey there! I'm Max.
           </h1>
           <p className="py-4 mb-4 leading-8 text-link font-lato md:w-1/2">
-            I'm a backend software developer. I learned to write code in 2019
-            with HTML, CSS and JavaScript. Since then I have spent my time
-            learning the trade and honing my craft. I have written good code (in
-            my opinion though), not so good code (that still worked- though I
-            could not figure out what made it run) and bad code but I have
-            learnt a lot of things along the way. I currently work at the{" "}
+            I have a background in backend development and a knack for
+            problem-solving, which makes me the perfect candidate for your next
+            project. If you need someone to come in and build something
+            completely new from the ground up, or if you'd just like some help
+            refining an idea that's already been in your head for a while but
+            hasn't quite come together (yet), I'm here for you. I can also help
+            with any of your other needs—like finding dead ends in any project
+            and figuring out what it will take to fix them. And if you need
+            someone who knows how to make things happen, then I'm your guy! My
+            experience has taught me that no problem is too big or too small
+            when it comes to making sure we get what we want accomplished. I
+            currently work at the{" "}
             <Link href={"https://enugutechhub.en.gov.ng"} className="text-link">
               Enugu State Tech Hub
             </Link>{" "}
