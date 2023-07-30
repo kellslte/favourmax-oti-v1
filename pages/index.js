@@ -59,7 +59,7 @@ const Home = ({ works, projects }) => {
             experience has taught me that no problem is too big or too small
             when it comes to making sure we get what we want accomplished. I
             currently work at {" "}
-            <Link href={"https://enugutechhub.en.gov.ng"} className="text-link">
+            <Link href={"https://gardeners4africa.com"} className="text-link">
               Gardeners For Africa,
             </Link>{" "}
             an Edtech Startup.
