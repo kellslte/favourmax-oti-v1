@@ -15,7 +15,7 @@ const Home = ({ works, projects }) => {
   return (
     <>
       <SEO
-        title="KellsLTE - Backend Software Developer | Welcome to my portfolio"
+        title="KellsLTE - Backend Software Developer | Welcome!"
         description="Favour Max-Oti Software Developer Portfolio and Blog"
         keywords={[
           "nextjs",
@@ -37,7 +37,7 @@ const Home = ({ works, projects }) => {
         }}
         facebook={{
           type: "website",
-          url: "https://favourmax-oti.com",
+          url: "https://portfolio.favourmax-oti.com",
           image: "/favicon.png",
         }}
       />
@@ -58,11 +58,11 @@ const Home = ({ works, projects }) => {
             someone who knows how to make things happen, then I'm your guy! My
             experience has taught me that no problem is too big or too small
             when it comes to making sure we get what we want accomplished. I
-            currently work at the{" "}
+            currently work at {" "}
             <Link href={"https://enugutechhub.en.gov.ng"} className="text-link">
-              Enugu State Tech Hub
+              Gardeners For Africa,
             </Link>{" "}
-            as the engineering team lead and lead backend developer.
+            an Edtech Startup.
           </p>
           <Button
             title={"view resume"}

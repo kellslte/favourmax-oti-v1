@@ -48,16 +48,7 @@ const Layout = ({ children }) => {
   return loading ? (
     <Loader loading={loading} setLoading={setLoading} />
   ) : (
-    <AnimatePresence mode="wait">
-        <motion.div
-          variants={variants}
-        initial={`in`}
-        animate={`inactive`}
-          exit={ `out` }
-          key={path}
-        transition={{ type: "spring", stiffness: 260, damping: 20 }}
-        className="h-screen overflow-x-hidden bg-base"
-      >
+    <>
         <Navbar />
         <main>{children}</main>
         {/* <Conditional showWhen={isLoading === false}>
@@ -65,8 +56,7 @@ const Layout = ({ children }) => {
         </Conditional> */}
         <Footer />
         <div id="modal-root"></div>
-      </motion.div>
-    </AnimatePresence>
+    </>
   );
 };
 
